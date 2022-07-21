@@ -67,7 +67,7 @@ You will get the results:
 
 ## Training
 
-The training code and instrument will release soon.
+python train.py --workers 4 --device 0 --batch-size 32 --data data/coco.yaml --img 320 320 --cfg cfg/deploy/yolov7-tiny-silu.yaml --name
 
 ## Citation
 
@@ -79,7 +79,8 @@ The training code and instrument will release soon.
   year={2022}
 }
 ```
-
+## export onnx
+python models/export.py  --weights runs/train/yolov7six10/weights/last.pt  --img-size 320
 ## Acknowledgements
 
 <details><summary> <b>Expand</b> </summary>
